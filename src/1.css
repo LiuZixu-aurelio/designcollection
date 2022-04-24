@@ -1,0 +1,48 @@
+#top{
+    height: 54px;
+    line-height: 54px;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    font-size: 20px;
+}
+
+#top2{
+    height: 48px;
+    background-color: rgb(233, 233, 233);
+}
+
+.topb{
+    height: 48px;
+    line-height: 48px;
+    font-size: 16px;
+    margin: 16px 8px;
+    color:rgb(59, 59, 59);
+    display: inline-block;
+    bottom: 16px;
+    position: relative;
+
+}
+
+.cont{
+
+    margin: auto;
+    width: 90%;
+
+}
+
+.topb:active{
+    color:rgb(242, 242, 242);
+    background-color: rgb(3, 3, 3);
+}
+
+.topb:hover{
+    color:rgb(242, 242, 242);
+    background-color: black;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+

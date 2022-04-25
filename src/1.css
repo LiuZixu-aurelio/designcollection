@@ -6,6 +6,7 @@ body{
 h2{
     position: relative;
     left: 36px;
+    margin: 0px;
 }
 #top{
     height: 54px;
@@ -34,7 +35,7 @@ h2{
     height: 36px;
     line-height: 36px;
     font-size: 16px;
-    margin: 16px 8px;
+    margin: 16px 8px 0px 8px;
     color:rgb(125, 125, 125);
     display: inline-block;
     bottom: 16px;
@@ -60,6 +61,7 @@ h2{
     display: inline-block;
     bottom: 16px;
     position: relative;
+    
 }
 
 .topb:visited{

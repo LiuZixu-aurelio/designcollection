@@ -1,4 +1,4 @@
-Vue.component('jingpinfenxi',{
+/* Vue.component('jingpinfenxi',{
     data:function(){
         return {count:0}
     },
@@ -24,4 +24,46 @@ Vue.component('jingpinfenxi',{
         </div>
 
         `
+}) */
+
+
+var a1 =`
+    <div class='cont'>
+    <DT><H3 ADD_DATE="1589205474" LAST_MODIFIED="1596249415">竞品分析</H3>
+    <DL><p>
+        <DT><A HREF="https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_9513061361628440353%22%7D&n_type=0&p_from=1" ADD_DATE="1586336211" ICON="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAACP0lEQVQ4jVWSS0jUYRTFf983M5qmMw4+UYsS0zAKKjdimkHgogcRNIGryijJRZs2UW1sWRIJQZBBbazcRGZCZA9FKoOCGlTMkbSHOj4QZ3TGceb/3RbzN+iuLpfDPffcc5QxIoLWGAFBa5JljN2LIIJS9lwrhVLIOvrhR5oe8XMRrQnM8uwrRlAKsfE4kwssg9KMTtP6mpklcjNo3s+5DoamuVzPxQM2iQj2BS4nTs1MCCMUeFiK0DvCr0WKvfSOEk+AILLOoBQPPhCNU19BVhr+KXYW4U5jeY3IGg2VpLhsVUrhVIr+MVp6iMQRaDvBQICz1awlOL+PNCfVJVzvoaaUujIsgxKRO320vSMjlfJ8Ok4DDE2RvZECD4Cvnb4xCj10NlKahxahLI9Ygt+LVBQgwoXH+O5z9C4v/FiGYJiSHKIJxudRCqcIB7dz4xjzKzTVcPstL4fJcxOJcaWLLTmU5tL1jUIPW7MRQf0zDmjt5epzWg4TXePee7zpZKbScoRgiOIsardhDMoyghBLcOkpgVlOVbG7mL7vjAQZnOTQDgYnuHmc8nwSFg6NNoLWdH6h20+bj1cjfJokz01dGaEoDZWEVvG1M7GAQyeNE0Tw/8G9gRQHc2EcihQH3nR2FWEZMlMJxxieRilM0mml2LOZqSWuddNYTU4GTz4zMM6ZKgLzzC2jFUVZICiFMkaA1Ti33tAfwOXAm84mLysxfiwQDJPi4ORemmvtFP73JcsAONYTblksRnFpPOl2kIC/BsEA9PPta4oAAAAASUVORK5CYII=">干货分享：B端产品该怎么做竞品分析？</A>
+        <DT><A HREF="https://zh.wikipedia.org/zh/" ADD_DATE="1586408907" ICON="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABO0lEQVQ4jaWTMaoCMRCG/wnvDtELmHaxdAmIXcheZA9hYeMNxNZqsc81lu0X+2VLTzBj8V5C8uQ9UAcG5k+YP5kvhPATzCx4IZRSBAD0TnNuQu82J5NPmgFADcMAay2UUjifzwAA733S8zzDWgtrLeZ5xvV6xXK5hPcet9vte/5pmoSIJIQgURtj5HQ6CTOLc06maRJmFmaWuq5TjVg454qNrutEay0hBDkej8V6NC4M+r4XANL3fdo0xogxJul4UK4TxPV6Decc9vt9ArTb7XC/35MehgFVVZUUc7cQghCRjOOYTtNaS9d1wszStm3BgpnlKzfz3mO1WuFyuWCz2aBpGlhrcTgcsN1uAQCLxeLvG0RIRJRmjS9U13XB5wlinlrrgnTbtk/w/jWIDPL8PXvMzz9TzuLVZgB4AExRsO8ga8hoAAAAAElFTkSuQmCC">维基百科，自由的百科全书</A>
+        <DT><A HREF="https://www.crunchbase.com/" ADD_DATE="1586408958">关键基础：发现创新型公司及其背后的人</A>
+        <DT><A HREF="https://www.36kr.com/" ADD_DATE="1586408972">36氪_让一部分人先看到未来</A>
+        <DT><A HREF="https://qianfan.analysys.cn/refine/view/rankApp/rankApp.html" ADD_DATE="1586408982">易观千帆 - 应用月度TOP榜</A>
+        <DT><A HREF="http://www.alexa.cn/" ADD_DATE="1586408989" ICON="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB50lEQVQ4jX2TvWsUURTFf/fNJpvdCCErKAorJHbBwjiCWCWVjYWFX4iNqEQbrQMWO7HJaiCFnU3ATmNAbESQ/AGCWRBbCYhkxdJIgsnszrGYmZ03BjzVvDvvnnvu4TzDRyRHC4VPaCIeY1wAxoAt4F2vx9LnR3QBMBOAlQgkC5eYJmEFWDcYF9wEhrMbXYmZzh6bRJYAuLwR4GybGcQLGTeSCs8+/eEuxpw34rgzlv2ZLv8IF3VfxgriI+KW6/H86hQWO9aA3YFIuHi6yon8XKwQKSVrIRaw8BjBxj2LAcK2NoEJj+R6Z95WASoDghZKjUmJNn7Q993xZZsKMuf/IJKbPkQzrHI5L81GqgANyhgrE0jGAhYOcdT1eC9Hn1Y69fcIo0DdVyNIygRmmoVhAt4A/ZMTvM0v9B1HgCF/A6wwdaBgu8oD4JyMxdfXrJ8HJejR4J+8GOwUBFkGzLgDxIGxnteQLHFU+Q8cZpn7NIE42WW7GGUiIT7QJUbKK6TYAWpJjalcPkDF+IlnWtY1fsADYA2wQLTDSHUiOSRLGnyH7AEVmMyDNzDn/LIa+/t8AM4gvuF4idgycViO24imR9D9VWfy60PbK7kbRqqrxpzBFcQp0qR+kfHKwWgiLllak8TTzjyrfwGBZq4vMzRsBAAAAABJRU5ErkJggg==">Alexa排名_网站流量全球综合排名_中文网站排行榜</A>
+        <DT><A HREF="https://appbot.co/" ADD_DATE="1586409030" ICON="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACdElEQVQ4jY2Sy0tUcRTHv7+X1zuO04zKjM6M4SvNIspHLyWsCDdlD23VOqwIDOkBpYvZVUQUuZCef0HEuFFamC5CgqgIpDSmaXyNOi9lLnNTZub+Wgky3qKzPHy/n3POl0Pwj0q9tlwVzGgQ9rXL5BgyZhqS2/D5fDQYXHegsKT47M5PJx1Kyv38Q8NgWuZppVZrcmCgZ/2vgAuX+ncYWaOXUdZiUQvLGBWKw2HL2gvVlJZaS8biq79kVj5++uT66IaHbgZIQ14kwBVCyF7OmPNAY+22w43eImZEy532zO76WvcpppDb3d0+y4aH5wBKAAkpgZoqD1zFHH39fQiFZtDc3ISOjtOo3l7mGp9IWgDouRsQm1XN85Q6wChFVYUbY2OjCAR+QgiB853nQGQWNitT6+s8+VtOGB4e9rQdqtulKgyGlDAMA0IIAEAmk8G9+w/wxj8Ezrmzwl1QvQXAOTcoo+ls1gABMPVjFm1Hj6OpsQGcM0hItLYeQSSuL09OLQa3ZNDe3h7uuXl3wl3mOLiSTGNmbhmKwnCt9xYWw/OgTCCZIgjOROZ0ZiQ2fGxziJX1+yPRFc2ZThs2wRU1ntDk7EIira9JYyn6OxSLaR9B8ejVwxvfTAGTX94veVv2+YkOv9NOy3UtLoKBya+2ArpKmdKlJ1LPXg7e+b7Zs+UTAcDl8u7p7DozpOt6xcjIW5QUF312OmtOjI/7V3O13AxABT2uaVolYwyEMkSisfJ4POoF8J8AQmyhUAicMRACEEJUQFrNtKYAIfICU9PTGQJwLhQAWEwztmA6zKxJLMo71WIdVfItKSObTRDIF4lweN5M+wfkbudgA6KJ1QAAAABJRU5ErkJggg==">App review &amp; ratings analysis for mobile teams - Appbot</A>
+        <DT><A HREF="https://shimo.im/dashboard/used" ADD_DATE="1586409423" ICON="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAC6ElEQVQ4jXWTT2icVRTFz7nvvW9mMh9J2zSDotg/DhQ3Mu1YmloVlWGMCxcFN7oruHHvouJCurKLutQuUtCFfxdWoQhBq0hbTU2p4nJiU6bThLTRmNiZSTTf9+51MVMoomd3udzL5Z7zIwYiAAOAI42pJ5y4YzB7ksBDGDQ6IC9Gje99f37m0r0zHBZ48PDh0sPp+Enn5FUSIcaIeyUiUNXMwNML3dXji7OzmwDgALBef2Hkvm2lL0LwL6+tr5FATJIEAGBmAGmmGkG6EMLkmC8e3Llt39nl5flcAFi6w97y3jUJ23rpxaO4vzLh19bX+ffWFpxz4OBcDwBZlm2F4Jvp9vwkAHNHGo1JJ+40zKy/sekO7a/JiTffsPGxMS4tLfHWym/03tN7b6YqBtBUleRjD+ypfu32Vh854cTVzVSd93J57goO1B7l1PNTeK7xLEbLJbRav6Lb67NQKJiZEYA65z0Bcbv3Vt8GsF3N6EQkqnHl9m00mw2MlMuo1Wp4fPIgFq4toN1ZZLFYoJoNvDEddbur+07B4Dl8mA+Bt1ZWcKh+AJVKBVmWYefEBJ55+incaLdxvd2xEDzNjKCkgn/JiWBj4y/8MHsZICHOIc9zlNMUrx9/DWmaIqqCGCRAYNohYSCNJE0VSSHBTz//Aos6cIGAqqLX7SHGnCSNQoNpR0C5IOIIMzUzU8CCD2jfXMLq6u+IeQRAiAimz7xv3X7fnIiSQlAuSK46rTpcO4gmvXP25507mPvxCrx3cM7hww8+splvv2OapmZmVI15FuMZd/P6tcVde6oTIUkmVTUbZlxAWqs1j35/Ax9/8inOnvuSxVJJzSwPIYSo+TuXzs9McxjlUjpun4fgm1mWKcxURCTPc3Z7PSRJwUZKRTVAQgiSZflXvVUevXr13KYDgOXl+SxWxj8b84VRAnXnfDBTigjL5TKTEEiKwCyPqu8udP94pTX3zeZdJP8fZ3LXEKgbJC/m/4HzP/txZxN3mu1TAAAAAElFTkSuQmCC">最近使用 - 石墨文档</A>
+        <DT><A HREF="https://wx.zsxq.com/dweb2/index/group/init" ADD_DATE="1586409451" ICON="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACpElEQVQ4jY2RT2hUVxSHv3PfmxkmgxPGmczEpK26KHQhgm6kigvBPwkIiYUKxYXtptQpKVL8s+jmKaWKC1cqRhcKoojiJnSqwcCkiwpSsizoRiyxiSaTGSdNXmbmvXdPF8lgU7T4bc7i3I/zu+cIywigAGtHr2x3jf1SI9mNsFEScWyjNVKZH/uMg3dt+10bd6Uqj84nu/5OnRXHfCfpNWit3lTkCWEYM0IAnwN3NTN2dbNtBJP1/cXa8mRFmBhOdlW453Rn+6KZ6vPIRj81Fs3P/trpWX7F4HktgNwvl485nakfowX/jyCIdtf3F2sugmbvh2ecdYW+aKY6rkvNQ9WBoSlWI4CK4VNJpxLSbG6N2SgP1Ey2dGGbk0wW7Wztz6WwcbAyMDRF2XNXpPYHAbAiP9h5/7ptBMVKf/EpAPnRy1cKv9/WXOnSNwB4nsv7cOeOg+cZ6Xow/EyE3oVGa6M/MDS9euZ/UBU4JUysc3IV7gsaGhzZoOgL/2V8dkV8uwwgoohneTYtInwi8dg+g6IgAhPvlRyAsSkFGhpGkUHtcxHpTfZsybO8OPkfVQBJDm4qiMiHWDtpFHkomXS8w+ggoJQ95536ck87TGxQMuk4MG6CILqqi37LJOInU6WL3ezyQsqei646o1D2XHZ5Yap0sds47gld9C3CNQHIlS6dc3vzx6OZ6m+RBl9U9307+bYAmYfDH7lWbzmF7I5gunJ9rv/IV4KHYf21eL6necvksweiyuu/LPasXVoaqbnmFUAmTBTchA6AOeHkMx+EM3OPg441/fWdh16/iVn23K5W92kcc9x0pl07V4/E8AILKvSYTGdMfR/bCm+07MLR+b7vq+2ttqsC5EYubNVE7LCBvcDHCI6qTmLMuIWb1T1fj/7b+QcRaSFqddvwMQAAAABJRU5ErkJggg==">知识星球 | 深度连接铁杆粉丝，运营高品质社群，知识变现的工具</A>
+        <DT><A HREF="https://www.qimai.cn/" ADD_DATE="1584685186" ICON="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACgElEQVQ4jXWTTUhUYRSGn3PvnXvnplYTaWRQk0EI/RAGUdFCg1qERgVWtAgiatEqIioi6otImyQ3QpSbfiCIEaJRoUWEBv0sysBCiUiKiogs1Bgd587c+7UYR6emzurwnXPe7z3vOQcKTSlj2u9Ss7jXtJzu5irire4/cwCZ9rQWRDT3mjbgOkfIZLdiSAUagK8Y8oB0qo1dZ/uncwsABNAkLu7FcW8xp8RmeHQEkX7QArKa8rkRxpJJ0t5Btp+K52uMKUqazth67PAtBJvvo+fxU1U0nKij4WQt2YkqhkcUYpRihW7Q3bIS0CiMGRZdsQRPr2kSsXb+Z52x2zy/rum6fCffdq443lRO2PyAZTr43ir6vHdTggW5eKPJ4ApNjbsOO/QULzNGWWoxdSppAWBTjRMqYdL7yLePQ6j24I+fB1dolAp41trPsDeGaUQYCS8D+qdGIg6WqRH5xfJKXUQ9z+TN2yymfMF1NKZUADkRMMniBwI41BIUAdxVNQBEKgVfz8fLCNr/NQPg+0NMeh4iURJli1DKoEfl2ktcOsTC8j7uN+/BthYQCi0g4ycJeD8DsOPMZ0SeMK/MQTKHUSrg6oAm3mhiWq9IZ77ihK5jWDcpDRsIj9l1+icgRsFqXiGVBsc+Rtel/XR0+Ozu8Kk/3kdyYh8YNpa1mfHUOIG+nNMG+WsTmxVlpecASE68BHkF2AirCJlrsS0YnxziR2olB9RkTr68aYTqR73srB3AYAki6yh11+KE1oCuxMs+JOO/JjJ7I/hRqjcl6O0tOKZCJiB0tkTRXhQxBNd9z5ajn+hRYcZLXqD1N8zP9WxrSxdNjHijWfxYGL+wtPC8fwOhR+3xjivJLAAAAABJRU5ErkJggg==">七麦数据（原ASO100）-专业移动产品商业分析平台-ASO-ASM优化</A>
+        <DT><A HREF="https://www.appannie.com/cn/" ADD_DATE="1586677036" ICON="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACyElEQVQ4jW2TT2jcRRiGn5n5YbVomqQ0UCtGoZUmgiBWRE+9qdCKxUJroSiC0EIF6cWDQdpeqgfRBkELihAjBIOBxirxD1ZEehGVgNsKic26JpsmTdZtYtdkfzPf62F3Y0QH5vTOOwPfPA+SDkqalZSa28zMYh4VY1Qeo/I8KpmZJFt3blbSQSdpAdgMGODMDO+943+Wmcl7DyDAA4tOktbKyfDBu98nSvz80y/Us0COuLFa56Fd97JzRzcxJWUhrF3iW2Wl1ChfmuLTt0c0MngeD9Rj5N2Bc5w+M6jxwiRZCC6lBOAAw8yU8lwm6VqhqJEX+21prqKZ6Tmd6uvXSy+/qZnyvKbL8zp09KSNFyYkSXmey8zkkeSyjPzKnOY+/EaPvfKsu62rgyx4qtVlFheu45xj29YtvHHqBXd2YFSTU9PKsgxJcmameHmG5ZMfkw4/TP3OzSxUl/jyi+94+vmnWFqt03/2I/bt3U1HextTpTIDw2O81neUnh3deIBUvIZmKqzWc+YvFbl4/lt6e7ezrft2eu65i96euxkevcB4YZKVlTpXfiszVZrFOQcpRknSn+e+V7F/VJJUXazqndPvKcaoep7reN8ZVf64Lkk68fr7Gv7kQnMOUd55j8XExid2sdq5ka9fHWRT5ybMOxbnKxRLs9yy4SY62ts4fuIttnZ1sn/PbmKMeO9xTbqQGT4Ed/GDMZZrNUJ3FzdnGVdrNTZkGYVfS7S33cqRZ54kxqSQBVyTPAEgYWaELOOroc/54cfLbNl+B9W/VpgolXnwgV6eO7SHPEaCD7gWqy3+/3EglySNDo3pkfv3a+d9+zQw9Jkkqd74+5YTJillTaYNcM45fAiKMbq9Bx6lcqOGOTh84HFijGQhyK093UD5PzK1spTMhQbzpJQIwWstXieTB44BV9cFgMN7T0qJlBINA/9Vptk59jd8YO4vNzhUMQAAAABJRU5ErkJggg==">App Annie | The App Analytics and App Data Industry Standard</A>
+        <DT><A HREF="https://www.questmobile.com.cn/" ADD_DATE="1596249415">QuestMobile-还原市场真相 助力企业增长 | 中国专业的移动互联网商业智能服务商</A>
+        <DT><A HREF="https://www.talkingdata.com/" ADD_DATE="1596249415">TalkingData-移动.数据.价值</A>
+    </DL></p>
+    </div>
+
+`
+
+var tiao1 = /<A.+>/g
+
+var input1 = a1.match(tiao1)
+console.log(input1)
+
+Vue.component('jingpinfenxi',{
+    data:function(){
+        return {input1}
+    },
+    template:
+        `
+        <div>
+            <h2>竞品分析</h2>
+            <div class='a-link' v-for='item in input1' v-html='item'></div>
+        </div>
+
+        `,
 })

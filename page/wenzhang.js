@@ -85,7 +85,7 @@ var a6 =         `
 var tiao6 = /<A.+>/g
 
 var input6 = a6.match(tiao6)
-console.log(input6)
+
 
 Vue.component('wenzhang',{
     data:function(){

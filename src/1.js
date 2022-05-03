@@ -12,6 +12,9 @@ var shejiziyuanRouter ={
         <router-link to="/shejiziyuan/tubiao" class="topb2">
             <div class="topb2">图标</div>
         </router-link>
+        <router-link to="/shejiziyuan/tupian" class="topb2">
+            <div class="topb2">图片</div>
+        </router-link>
         <router-link to="/shejiziyuan/dongxiao" class="topb2">
         <div class="topb2">动效</div>
         </router-link>
@@ -60,8 +63,7 @@ var support = {
     template:
     `
     <div>
-    <h2>内容贡献者：缪缪</h2>
-    <h2>作者: Aurelio</h2>
+    <h2>内容贡献者：</h2>
     </div>
     `
 }
@@ -70,8 +72,11 @@ var zitiRouter ={
     template:`<ziti></ziti>`
 }
 var tubiaoRouter ={
-    template:`<tubiao></tubiao>`
+    template:`<tubiao></tubiao>`    
 }
+var tupianRouter ={
+    template:`<tupian></tupian>`
+    }
 var dongxiaoRouter ={
     template:`<dongxiao></dongxiao>`
 }
@@ -98,6 +103,7 @@ var router = new VueRouter({
             {path:'/shejiziyuan/yangji' ,component: yangjiRouter},
             {path:'/shejiziyuan/peise' ,component: peiseRouter},
             {path:'/shejiziyuan/wendang' ,component: wendangRouter},
+            {path:'/shejiziyuan/tupian' ,component: tupianRouter},
         ]},
         {path:'/shejixitong' ,component: shejixitongRouter},
         {path:'/sandxiangguang' ,component: sandxiangguanRouter},

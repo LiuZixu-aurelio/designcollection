@@ -52,7 +52,7 @@ var a1 =`
 var tiao1 = /<A.+>/g
 
 var input1 = a1.match(tiao1)
-console.log(input1)
+
 
 Vue.component('jingpinfenxi',{
     data:function(){

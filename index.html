@@ -13,7 +13,6 @@
     <script src="./page/shejiziyuan.js"></script>
     <script src="./page/sucaicaikao.js"></script>
     <script src="./page/wenzhang.js"></script>
-    <script src="./page/wenzhang.js"></script>
     <script src="./page/shejiziyuan/ziti.js"></script>
     <script src="./page/shejiziyuan/chahua.js"></script>
     <script src="./page/shejiziyuan/dongxiao.js"></script>
@@ -22,40 +21,132 @@
     <script src="./page/shejiziyuan/wendang.js"></script>
     <script src="./page/shejiziyuan/tupian.js"></script>
     <script src="./page/shejiziyuan/yangji.js"></script>
+    <script src="./page/shejiziyuan/aigc.js"></script>
     <link rel="stylesheet" href='./src/1.css'>
 </head>
 <body>
     <div id="app">
         <div id="top">
             <img src="./src/logo.png" id="logotop">
-            设计素材大全
+            设计导航
         </div>
-        <div id="top2">
-            <router-link to="/shejiziyuan" class="topb">
-                <a class="topb">设计资源</a>
-            </router-link>
-            <router-link to="/shejixitong" class="topb">
-                <a class="topb">设计系统</a>   
-            </router-link>
-            <router-link to="/sandxiangguang" class="topb">
-                <a class="topb">3d相关</a>  
-            </router-link>
-            <router-link to="/jingpinfenxi" class="topb">
-                <a class="topb">竞品分析</a>
-            </router-link>
-            <router-link to="/wenzhang" class="topb">
-                <a class="topb">文章</a>
-            </router-link>
-            <router-link to="/sucaicankao" class="topb">
-                <a class="topb">素材参考</a>
-            </router-link>
-<!--             <router-link to="/support" class="topb">
-                <a class="topb">支持&贡献</a>
-            </router-link> -->
+        <div id="top2" class="nav-main">
+            <router-link to="/shejiziyuan" class="topb" exact>设计资源</router-link>
+            <router-link to="/shejixitong" class="topb">设计系统</router-link>
+            <router-link to="/sandxiangguang" class="topb">3D相关</router-link>
+            <router-link to="/jingpinfenxi" class="topb">竞品分析</router-link>
+            <router-link to="/wenzhang" class="topb">文章</router-link>
+            <router-link to="/sucaicankao" class="topb">素材参考</router-link>
         </div>
-        <router-view></router-view>
+        <router-view class="main-content"></router-view>
         
     </div>
+    <script>
+        (function () {
+            var DOMESTIC_HOST_KEYS = [
+                // 常见国内站点域名（含 .com/.cn 等）
+                'huaban.com',
+                'yunque8.com',
+                'qiuziti.com',
+                'zcool.com',
+                'oursketch.com',
+                'capcut.com',
+                'uiiiuiii.com',
+                'iconfont.cn',
+                'iconpark.bytedance.com',
+                'bytedance.com',
+                'qq.com',
+                'weixin.qq.com',
+                'mp.weixin.qq.com',
+                'zhihu.com',
+                'baidu.com',
+                'eleme.cn',
+                'qimai.cn',
+                'questmobile.com.cn',
+                'talkingdata.com',
+                'analysys.cn',
+                'woshipm.com',
+                'uisdc.com',
+                'pmcaff.com',
+                'jianshu.com',
+                'shimo.im',
+                'yuque.com',
+                'mockplus.cn',
+                'ui.cn',
+                'design.ke.com',
+                'tdesign.tencent.com',
+                'wechat.design',
+                'mdui.org',
+                'capcut.cn'
+            ];
+
+            function isHttpLink(href) {
+                return /^https?:\/\//i.test(href);
+            }
+
+            function isDomesticUrl(href) {
+                try {
+                    var host = new URL(href).hostname.toLowerCase();
+                    if (host === 'localhost' || host === '127.0.0.1') return true;
+                    if (host.endsWith('.cn')) return true;
+
+                    for (var i = 0; i < DOMESTIC_HOST_KEYS.length; i++) {
+                        if (host === DOMESTIC_HOST_KEYS[i] || host.endsWith('.' + DOMESTIC_HOST_KEYS[i])) {
+                            return true;
+                        }
+                    }
+                    return false;
+                } catch (e) {
+                    return false;
+                }
+            }
+
+            function annotateLinks() {
+                var links = document.querySelectorAll('a[href]');
+                links.forEach(function (link) {
+                    var href = (link.getAttribute('href') || '').trim();
+                    if (!isHttpLink(href)) return;
+
+                    // 外链新标签页打开
+                    link.setAttribute('target', '_blank');
+                    link.setAttribute('rel', 'noopener noreferrer');
+
+                    // 先去掉旧前缀，再按最新规则重打（避免规则升级后标签不更新）
+                    var rawText = (link.textContent || '').trim();
+                    if (!rawText) return;
+
+                    var cleanText = rawText.replace(/^\[(国内|国外)\]\s*/, '');
+                    var tag = isDomesticUrl(href) ? '[国内] ' : '[国外] ';
+                    link.textContent = tag + cleanText;
+                });
+            }
+
+            // 暴露给 Vue 路由钩子调用
+            window.__annotateResourceLinks = annotateLinks;
+
+            // 初始标注
+            document.addEventListener('DOMContentLoaded', function () {
+                annotateLinks();
+                // 首屏渲染后再补一次，避免时机问题
+                setTimeout(annotateLinks, 0);
+                setTimeout(annotateLinks, 60);
+            });
+
+            // 路由切换后再次标注
+            window.addEventListener('hashchange', function () {
+                setTimeout(annotateLinks, 0);
+            });
+
+            // 处理动态渲染内容
+            var app = document.getElementById('app');
+            if (app) {
+                var observer = new MutationObserver(function () {
+                    annotateLinks();
+                });
+                observer.observe(app, { childList: true, subtree: true });
+            }
+        })();
+    </script>
     <script src="./src/1.js"></script>
 </body>
 </html>

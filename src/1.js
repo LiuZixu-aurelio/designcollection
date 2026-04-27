@@ -3,123 +3,84 @@
 
 } */
 
-var shejiziyuanRouter ={
-    template:`
+const wrapComponent = (tagName) => ({
+    template: `<${tagName}></${tagName}>`
+});
+
+const shejiziyuanRouter = {
+    template: `
     <div>
-        <router-link to="/shejiziyuan/ziti" class="topb2">
-            <div class="topb2">字体</div>
-        </router-link>
-        <router-link to="/shejiziyuan/tubiao" class="topb2">
-            <div class="topb2">图标</div>
-        </router-link>
-        <router-link to="/shejiziyuan/tupian" class="topb2">
-            <div class="topb2">图片</div>
-        </router-link>
-        <router-link to="/shejiziyuan/dongxiao" class="topb2">
-        <div class="topb2">动效</div>
-        </router-link>
-        <router-link to="/shejiziyuan/peise" class="topb2">
-            <div class="topb2">配色</div>
-        </router-link>
-        <router-link to="/shejiziyuan/chahua" class="topb2">
-            <div class="topb2">插画</div>
-        </router-link>
-        <router-link to="/shejiziyuan/yangji" class="topb2">
-            <div class="topb2">样机</div>
-        </router-link>
-        <router-link to="/shejiziyuan/wendang" class="topb2">
-        <div class="topb2">文档</div>
-    </router-link>
+        <nav class="sub-nav" aria-label="设计资源分类导航">
+            <router-link to="/shejiziyuan/ziti" class="topb2">字体</router-link>
+            <router-link to="/shejiziyuan/tubiao" class="topb2">图标</router-link>
+            <router-link to="/shejiziyuan/tupian" class="topb2">图片</router-link>
+            <router-link to="/shejiziyuan/dongxiao" class="topb2">动效</router-link>
+            <router-link to="/shejiziyuan/peise" class="topb2">配色</router-link>
+            <router-link to="/shejiziyuan/chahua" class="topb2">插画</router-link>
+            <router-link to="/shejiziyuan/yangji" class="topb2">样机</router-link>
+            <router-link to="/shejiziyuan/aigc" class="topb2">AIGC</router-link>
+            <router-link to="/shejiziyuan/wendang" class="topb2">文档</router-link>
+        </nav>
         <router-view></router-view>
     </div>
     `
+};
 
-}
-var shejiziyuanRouter2 ={
-    template:`<shejiziyuan></shejiziyuan>`
-}
-var shejixitongRouter ={
-    template:`<shejixitong></shejixitong>`
-}
-
-var sandxiangguanRouter ={
-    template:`<sandxiangguan></sandxiangguan>`
-}
-
-var jingpinfenxiRouter ={
-    template:`<jingpinfenxi></jingpinfenxi>`
-}
-
-var wenzhangRouter ={
-    template:`<wenzhang></wenzhang>`
-}
-
-var sucaicankaoRouter ={
-    template:`<sucaicankao></sucaicankao>`
-}
-
-
-var support = {
-    template:
-    `
+const support = {
+    template: `
     <div>
-    <h2>内容贡献者：</h2>
+        <h2>内容贡献者：</h2>
     </div>
     `
-}
+};
 
-var zitiRouter ={
-    template:`<ziti></ziti>`
-}
-var tubiaoRouter ={
-    template:`<tubiao></tubiao>`    
-}
-var tupianRouter ={
-    template:`<tupian></tupian>`
-    }
-var dongxiaoRouter ={
-    template:`<dongxiao></dongxiao>`
-}
-var peiseRouter ={
-    template:`<peise></peise>`
-}
-var chahuaRouter ={
-    template:`<chahua></chahua>`
-}
-var yangjiRouter ={
-    template:`<yangji></yangji>`
-}
-var wendangRouter ={
-    template:`<wendang></wendang>`
-}
-var router = new VueRouter({
-    routes:[
-        {path:'/shejiziyuan', component: shejiziyuanRouter,children:[
-            {path:'/shejiziyuan' ,component: shejiziyuanRouter2},
-            {path:'/shejiziyuan/ziti' ,component: zitiRouter},
-            {path:'/shejiziyuan/tubiao' ,component: tubiaoRouter},
-            {path:'/shejiziyuan/dongxiao' ,component: dongxiaoRouter},
-            {path:'/shejiziyuan/chahua' ,component: chahuaRouter},
-            {path:'/shejiziyuan/yangji' ,component: yangjiRouter},
-            {path:'/shejiziyuan/peise' ,component: peiseRouter},
-            {path:'/shejiziyuan/wendang' ,component: wendangRouter},
-            {path:'/shejiziyuan/tupian' ,component: tupianRouter},
-        ]},
-        {path:'/shejixitong' ,component: shejixitongRouter},
-        {path:'/sandxiangguang' ,component: sandxiangguanRouter},
-        {path:'/jingpinfenxi' ,component: jingpinfenxiRouter},
-        {path:'/wenzhang' ,component: wenzhangRouter},
-        {path:'/sucaicankao' ,component: sucaicankaoRouter},
-        {path:'/support' , component: support},
-        {path:'/', redirect:'/shejiziyuan/ziti'}
-
+const router = new VueRouter({
+    routes: [
+        {
+            path: '/shejiziyuan',
+            component: shejiziyuanRouter,
+            children: [
+                { path: '', redirect: 'ziti' },
+                { path: 'ziti', component: wrapComponent('ziti') },
+                { path: 'tubiao', component: wrapComponent('tubiao') },
+                { path: 'dongxiao', component: wrapComponent('dongxiao') },
+                { path: 'chahua', component: wrapComponent('chahua') },
+                { path: 'yangji', component: wrapComponent('yangji') },
+                { path: 'aigc', component: wrapComponent('aigc') },
+                { path: 'peise', component: wrapComponent('peise') },
+                { path: 'wendang', component: wrapComponent('wendang') },
+                { path: 'tupian', component: wrapComponent('tupian') }
+            ]
+        },
+        { path: '/shejixitong', component: wrapComponent('shejixitong') },
+        { path: '/sandxiangguang', component: wrapComponent('sandxiangguan') },
+        { path: '/jingpinfenxi', component: wrapComponent('jingpinfenxi') },
+        { path: '/wenzhang', component: wrapComponent('wenzhang') },
+        { path: '/sucaicankao', component: wrapComponent('sucaicankao') },
+        { path: '/support', component: support },
+        { path: '/', redirect: '/shejiziyuan/ziti' }
     ],
-/*     mode:'history' */
-})
+    scrollBehavior() {
+        return { x: 0, y: 0 };
+    }
+    /* mode:'history' */
+});
 
+router.afterEach(function () {
+    if (typeof window.__annotateResourceLinks === 'function') {
+        setTimeout(window.__annotateResourceLinks, 0);
+        setTimeout(window.__annotateResourceLinks, 60);
+    }
+});
 
-var vm = new Vue({
-    el:"#app",
-    router:router
-}) 
-
+new Vue({
+    el: '#app',
+    router,
+    mounted() {
+        if (typeof window.__annotateResourceLinks === 'function') {
+            this.$nextTick(function () {
+                window.__annotateResourceLinks();
+            });
+        }
+    }
+});

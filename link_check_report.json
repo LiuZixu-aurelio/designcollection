@@ -1,0 +1,257 @@
+{
+  "summary": {
+    "total": 163,
+    "good": 122,
+    "maybe": 0,
+    "bad": 41
+  },
+  "bad": [
+    {
+      "url": "http://design.ke.com/page/home",
+      "code": null,
+      "final": "",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "http://findguidelin.es/",
+      "code": null,
+      "final": "",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://grid.guide/",
+      "code": null,
+      "final": "",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "http://khroma.co/",
+      "code": null,
+      "final": "",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://labs.tineye.com/",
+      "code": null,
+      "final": "",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "http://pngimg.com/search",
+      "code": null,
+      "final": "",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "http://www.paletton.com/",
+      "code": null,
+      "final": "",
+      "error": "HTTP Error 406: Not Acceptable"
+    },
+    {
+      "url": "http://www.yunque8.com/user?action=aff",
+      "code": null,
+      "final": "",
+      "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "url": "https://500px.com/popular",
+      "code": null,
+      "final": "",
+      "error": "<urlopen error [Errno 54] Connection reset by peer>"
+    },
+    {
+      "url": "https://api.mapbox.com/styles/v1/mapbox/light-v10.html?title=true&access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA#13.52/47.50887/19.08254",
+      "code": null,
+      "final": "",
+      "error": "HTTP Error 401: Unauthorized"
+    },
+    {
+      "url": "https://collectui.com/challenges/sign-up?page=2",
+      "code": null,
+      "final": "",
+      "error": "<urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>"
+    },
+    {
+      "url": "https://delesign.com/free-designs/graphics/https://www.manypixels.co/gallery",
+      "code": null,
+      "final": "",
+      "error": "<urlopen error _ssl.c:1112: The handshake operation timed out>"
+    },
+    {
+      "url": "https://design.google/library/",
+      "code": null,
+      "final": "",
+      "error": "<urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>"
+    },
+    {
+      "url": "https://facebook.design/",
+      "code": null,
+      "final": "",
+      "error": "<urlopen error _ssl.c:1112: The handshake operation timed out>"
+    },
+    {
+      "url": "https://imgur.com/a/4scqU",
+      "code": null,
+      "final": "",
+      "error": "<urlopen error [Errno 54] Connection reset by peer>"
+    },
+    {
+      "url": "https://lawsofux.com/aesthetic-usability-effect.html",
+      "code": null,
+      "final": "",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://malli.graphics/",
+      "code": null,
+      "final": "",
+      "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "url": "https://oursketch.com/tool/design-camera",
+      "code": null,
+      "final": "",
+      "error": "<urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>"
+    },
+    {
+      "url": "https://pixabay.com/",
+      "code": null,
+      "final": "",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://pngss.com/",
+      "code": null,
+      "final": "",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://screenlane.com/screens/all/views/sign-up/",
+      "code": null,
+      "final": "",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://tablericons.com/",
+      "code": null,
+      "final": "",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://themesdesign.in/stexo/layouts/vertical/index.html",
+      "code": null,
+      "final": "",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://uimovement.com/",
+      "code": null,
+      "final": "",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://unsplash.com/",
+      "code": null,
+      "final": "",
+      "error": "HTTP Error 401: Unauthorized"
+    },
+    {
+      "url": "https://www.adobe.com/cn/products/xd/resources.html#panel-3",
+      "code": null,
+      "final": "",
+      "error": "The read operation timed out"
+    },
+    {
+      "url": "https://www.appannie.com/cn/",
+      "code": null,
+      "final": "",
+      "error": "HTTP Error 503: Service Temporarily Unavailable"
+    },
+    {
+      "url": "https://www.artstation.com/?sort_by=community",
+      "code": null,
+      "final": "",
+      "error": "<urlopen error [Errno 54] Connection reset by peer>"
+    },
+    {
+      "url": "https://www.designyourway.net/blog/graphic-design/wedding-fonts/",
+      "code": null,
+      "final": "",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.drawkit.io/",
+      "code": null,
+      "final": "",
+      "error": "<urlopen error _ssl.c:1112: The handshake operation timed out>"
+    },
+    {
+      "url": "https://www.iconfinder.com/",
+      "code": null,
+      "final": "",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.materialui.co/",
+      "code": null,
+      "final": "",
+      "error": "HTTP Error 308: Permanent Redirect"
+    },
+    {
+      "url": "https://www.microsoft.com/design",
+      "code": null,
+      "final": "",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.notion.so/SaaS-86f4028f8c994cbf9bbe7b6ca52d087b",
+      "code": null,
+      "final": "",
+      "error": "<urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>"
+    },
+    {
+      "url": "https://www.pexels.com/",
+      "code": null,
+      "final": "",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.producthunt.com/",
+      "code": null,
+      "final": "",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.shapefest.com/",
+      "code": null,
+      "final": "",
+      "error": "HTTP Error 308: Permanent Redirect"
+    },
+    {
+      "url": "https://www.shapefest.com/expansions/3000-hands",
+      "code": null,
+      "final": "",
+      "error": "HTTP Error 308: Permanent Redirect"
+    },
+    {
+      "url": "https://www.vecteezy.com/free-vector/ui",
+      "code": null,
+      "final": "",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://zh.wikipedia.org/zh/",
+      "code": null,
+      "final": "",
+      "error": "<urlopen error _ssl.c:1112: The handshake operation timed out>"
+    },
+    {
+      "url": "https://zhuanlan.zhihu.com/p/26625249",
+      "code": null,
+      "final": "",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ],
+  "maybe": []
+}

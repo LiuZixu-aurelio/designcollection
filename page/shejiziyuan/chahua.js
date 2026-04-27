@@ -10,7 +10,7 @@ var aa5 =        `
     <DT><A HREF="https://freeillustrations.xyz/" >免费矢量插画 - Free illustrations - Free to use illustrations &amp; vectors</A>
     <DT><A HREF="https://3ddd.casa/" >3D插画</A>
     <DT><A HREF="https://storyset.com/" >等距免费矢量下载超过1000个图形资源-Isoflat.com</A>
-    <DT><A HREF="https://delesign.com/free-designs/graphics/https://www.manypixels.co/gallery">运营风插画可调整色调 - Gallery | Delesign</A>
+    <DT><A HREF="https://www.manypixels.co/gallery">运营风插画可调整色调 - Gallery | Delesign</A>
     <DT><A HREF="https://isoflat.com/free-vectors-and-graphic-resources/page/2/?orderby=date%20%20%20%20" > 海量免费矢量插画 - Isometric Free Vector Download Over 1000 graphic resources - Isoflat.com</A>
 </DL><p>
 `
